@@ -25,6 +25,12 @@
 //	   distribution.
 //
 
+#pragma clang diagnostic ignored "-Wconversion"
+#pragma clang diagnostic ignored "-Wsign-compare"
+#pragma clang diagnostic ignored "-Widiomatic-parentheses"
+#pragma clang diagnostic ignored "-Wempty-body"
+#pragma clang diagnostic ignored "-Wunused-value"
+
 // -----------------------------------------------------------------------------
 //	Headers:
 // -----------------------------------------------------------------------------

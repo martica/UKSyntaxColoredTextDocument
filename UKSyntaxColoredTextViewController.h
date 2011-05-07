@@ -45,6 +45,7 @@
 @protocol UKSyntaxColoredTextViewDelegate <NSObject>
 
 @optional
+-(void) textDidChange:(NSNotification *)notification;
 -(void)	textViewControllerWillStartSyntaxRecoloring: (UKSyntaxColoredTextViewController*)sender;		// Show your progress indicator.
 -(void)	textViewControllerProgressedWhileSyntaxRecoloring: (UKSyntaxColoredTextViewController*)sender;	// Make sure it gets redrawn.
 -(void)	textViewControllerDidFinishSyntaxRecoloring: (UKSyntaxColoredTextViewController*)sender;		// Hide your progress indicator.
@@ -105,6 +106,7 @@
 -(NSDictionary*)	defaultTextAttributes;		// Style attributes dictionary for an NSAttributedString.
 
 // Private:
+-(void) processEditing: (NSNotification*)notification;
 -(void) turnOffWrapping;
 
 -(void) recolorRange: (NSRange) range;
